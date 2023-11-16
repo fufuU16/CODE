@@ -1,0 +1,382 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6f5f7;
+    font-family: 'Montserrat', sans-serif,'Inter';
+    min-height: 100%;
+    margin: 0;
+    max-height: 100%;
+}
+
+.nav-links {
+    position: absolute;
+    top: 10px; /* Adjust the top position to move it to the top */
+    right: 20px; /* Adjust the right position as needed */
+    display: flex;
+}
+
+.nav-links a {
+    color: #387d3d; /* Your desired link color */
+    text-decoration: none;
+    margin: 0 10px; /* Add margin between links as needed */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links a:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    width: 10px; /* Adjust the width of the hover effect */
+    height: 10px; /* Adjust the height of the hover effect */
+    background-color: #387d3d; /* Your desired hover color */
+    border-radius: 50%;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;
+  padding: 10px; /* Add padding as needed */
+  background-color: #fff; /* Background color for the header */
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 80px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Add padding as needed */
+  background-color: #fff; /* Background color for the header */
+  max-width: 72%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 60px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+   
+}.search-bar {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #306532;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: #387d3d;
+  border: 1px solid #387d3d;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: -20px;
+}
+.search-button:hover {
+background: #306532;
+}
+.container-sale {
+  margin-top: 20px;
+  top: 10%;
+  position: relative;
+  width: 100%;
+  max-width: 1152px;
+  background:  #ffffff; /* Slightly darker green gradient */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10px; /* Add padding to the left and right sides of the container */
+}
+.container {
+  margin-top: 20px;
+  top: 10%;
+  position: relative;
+  width: 100%;
+  max-width: 1152px;
+  background:  #fafafa; /* Slightly darker green gradient */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 10px; /* Add padding to the left and right sides of the container */
+}
+
+/* Banner CSS */
+.banner {
+  width: 100%;
+  max-width: 74%;
+  height: 150px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint (768px) as needed */
+  .banner {
+    max-width: 100%;
+  }
+}
+
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slide {
+  animation: bannerFade 16s infinite; /* 16 seconds for a complete cycle */
+  opacity: 0;
+  position: absolute;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@keyframes bannerFade {
+  0%, 25% { opacity: 1; } /* Each image is displayed for 25% of the cycle */
+  28%, 53% { opacity: 0; }
+  56%, 81% { opacity: 0; }
+  84%, 100% { opacity: 1; }
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px; 
+    right: 50%;
+}
+
+/* Styles for the product image */
+.product-image img {
+   
+    width: 70%; /* Make the image take up the full width of its container */
+}
+
+/* Styles for the product details */
+.product-details {
+    width: 50%; /* Adjust as needed based on your design */
+    padding: 5px; /* Add padding for better spacing */
+    
+}
+
+.additional-images {
+    display: flex;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+#product2-name {
+    color:#1e1e1e;
+  
+
+    font-size:40px;
+  
+    letter-spacing:-1.899999976158142px;
+   
+
+    outline:none;
+    width:396px;
+}   
+#Description1{
+  margin-top: 10px;
+  color:#1e1e1e;
+  font-size:30px;
+
+}
+#product2-price{
+    color: red;
+    font-size:30px;
+}
+.additional-images img {
+    max-width: 150px; /* Adjust the width of additional images as needed */
+    height: auto;
+    margin-right: 5px; /* Adjust the margin between additional images as needed */
+}.product-rating {
+  display: flex;
+  color: #4da153; /* Set the color of the stars */
+}
+
+.star {
+  font-size: 50px; /* Set the font size of the stars */
+  margin-right: 5px; /* Adjust the spacing between stars */
+  transform: scale(0.8); /* Adjust the scale factor as needed */
+  display: inline-block;
+}
+label {
+
+  margin-right: 10px;
+  font-size:25px;
+}
+#size {
+  margin-top: 10px; /* Add margin between price and size dropdown */
+}
+/* Style the select element */
+select {
+  padding: 8px;
+  font-size: 16px;
+}
+#Stock{  margin-top: 10px;}
+#Stock #stockValue {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+button#buyNow.action-button {
+  
+  background-color:#14ae5c;
+height:40px;
+width:176px;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button#buyNow.action-button:hover {
+  background-color: #2a5c29;
+}
+
+/* Add to Cart button styles */
+button#addToCart.action-button {
+  background-color: #387d3d;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  height:40px;
+width:176px;
+}
+
+button#addToCart.action-button:hover {
+  background-color: #356f36;
+}
+
+/* Add some margin between the buttons */
+button.action-button + button.action-button {
+
+  margin-left: 10px;
+}
+.container-sale .flashsale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Flexible grid layout */
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center; /* Center the products horizontally */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px; /* Limit the maximum width of the grid */
+  margin: 0 auto;
+}
+.container-sale  .product img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 70px;
+  height: 70px;
+ 
+}
+
+/* Set a fixed width for each product to fit 5 products in a row */
+.container-sale  .product {
+  background: #fff;
+  flex: 1;
+ /* Set your desired minimum height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+  margin: 0;
+  max-width: 200px;
+  min-width: 100px;
+  border-radius: 10px;
+}
+
+
+.container-sale  .product:hover {
+  transform: scale(1.1);
+}
+
+.container-sale  .product-name {
+  font-size: 10px;
+  margin-top: auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.container-sale  .product-price {
+  margin-top: 10px;
+  color: red;
+  text-align: center;font-family: 'Inter', sans-serif;
+}
+.styled-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #306532;
+  border-radius: 5px;
+  font-size: 14px;
+  appearance: none;
+  background: #fff url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-down-b-128.png') no-repeat right center;
+  background-size: 20px;
+}
+#counter {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+#Quantity{
+  font-size: 30px;
+  margin-bottom: 10px;
+
+}
+.button {
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+}

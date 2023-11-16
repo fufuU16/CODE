@@ -1,0 +1,194 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f5f7;
+  font-family: 'Montserrat', sans-serif,'Inter';
+  min-height: 100%;
+  margin: 0;
+  max-height: 100%;
+}
+.nav-links {
+  position: absolute;
+  top: 10px; /* Adjust the top position to move it to the top */
+  right: 20px; /* Adjust the right position as needed */
+  display: flex;
+}
+
+.nav-links a {
+  color: #387d3d; /* Your desired link color */
+  text-decoration: none;
+  margin: 0 10px; /* Add margin between links as needed */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links a:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 10px; /* Adjust the width of the hover effect */
+  height: 10px; /* Adjust the height of the hover effect */
+  background-color: #387d3d; /* Your desired hover color */
+  border-radius: 50%;
+}
+.container {
+  margin-top: 20px;
+  top: 10%;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  padding: 80px 5px; 
+  justify-content: center;
+  margin-bottom: 20px; /* Updated margin-bottom to 20px */
+}
+
+.mainbanner {
+
+  height: 310px;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+  
+}
+.mainbanner img{
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+}
+
+@keyframes mainbannerFade {
+  0%, 25% { opacity: 1; } /* Each image is displayed for 25% of the cycle */
+  28%, 53% { opacity: 0; }
+  56%, 81% { opacity: 0; }
+  84%, 100% { opacity: 1; }
+}
+.sidebanner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebanner1 {
+  margin-bottom: 10px; /* Adjust the margin size as needed */
+}
+
+.sidebanner1,
+.sidebanner2 {
+  width: 100%; /* Use 100% width for sidebanners to fill the container */
+  height: 150px;
+  margin-left: 5px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  margin-bottom: 20px; /* Added margin-bottom to 20px */
+  display: flex;  
+  width: 100%;
+  max-width: 1105px;
+  height: 600px;
+  background-color: #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) { /* Adjust the breakpoint (768px) as needed */
+  .banner {
+    max-width: 100%;
+  }
+}
+.banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.slide {
+  animation: bannerFade 16s infinite; /* 16 seconds for a complete cycle */
+  opacity: 0;
+  position: absolute;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@keyframes bannerFade {
+  0%, 25% { opacity: 1; } /* Each image is displayed for 25% of the cycle */
+  28%, 53% { opacity: 0; }
+  56%, 81% { opacity: 0; }
+  84%, 100% { opacity: 1; }
+}  
+
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Arrange rows horizontally */
+}
+
+/* Add additional styles for the footer content */
+.footer-row {
+  width: 200px; /* Set a fixed width for each row */
+  display: flex;
+  flex-direction: column; /* Each content in a new column */
+  align-items: center; /* Center content horizontally */
+}
+
+.footer-row p {
+  margin: 0;
+  width: 100%; /* Full width of the container */
+  text-align: justify;
+  padding: 10px; /* Add padding for better spacing */
+  word-wrap: break-word; /* Allow content to wrap to a new line if it's too long */
+}
+
+.brand-showcase {
+  margin-bottom: 20px; /* Added margin-bottom to 20px */
+  width: 100%;
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-around; /* Align images horizontally */
+  align-items: center; /* Center images vertically */
+}
+.brand-showcase img {
+  width: 150px; /* Set a fixed width for each image */
+  height: 100px; /* Set a fixed height for each image */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  margin: 10px; /* Add spacing between images */
+}
